@@ -1,48 +1,60 @@
 #!/bin/sh
 
-#grab a file (piped to stdout or saving it)
-function grab_url(){
+#download a file from the internet, piping the file contents to stdout or
+#saving it to a file:
+
+
+
+#print your IP_ADDRESS AND USERAGENT
+#  curl -s http://www.sente.cc/stu/cgi-bin/env.py?ip:agent 
+
+function grab_url  {
 	URL=$1
 	OUT=$2
+	echo $URL
+	echo $OUT
 	if [ -z "$OUT" ]; then 
+		echo "curl -s $URL"
 		curl -s $URL 
 	else
+		echo "curl -s $URL -o $OUT"
 		curl -s $URL -o $OUT
 	fi
 }
 
+##############################################################################
 
-##============================================
-
-
+#upload a file (CGI POST)
 function upload_a_file() {
-	#upload a file (CGI POST)
 	TARGET=http://sente.cc/stu/cgi-bin/compare-bin.py
 	FILE=/etc/passwd
 	curl -F "file.1=@${FILE}" $TARGET
 }
 
 
-##============================================
+##############################################################################
+#upload two files
 function upload_two_files() {
-	#upload two files
 	TARGET=http://sente.cc/stu/cgi-bin/compare-bin.py
 	FILE=/etc/passwd
 	FILE2=/etc/group
 	curl -F "file.1=@${FILE}" "file.2=@${FILE}" $TARGET
 }
-##============================================
 
+##############################################################################
+
+#piping into curl and uploading as if it was "myfile.file"
 function pipe_file_upload() {
-	#piping into curl and uploading as if it was "myfile.file"
 	TARGET=http://sente.cc/stu/cgi-bin/compare-bin.py
 	curl -F "myfile.file=<-" $TARGET
 }
-##============================================
 
+##############################################################################
+
+#piping into curl and uploading it as if it was from a textarea
 function emailpipe () {
-	#piping into curl and uploading it as if it was from a textarea
 	curl -F "note=<-" http://sente.cc/cgi-bin/email.pl
 }
+
 
 
