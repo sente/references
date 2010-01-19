@@ -6,7 +6,7 @@
 
 
 #print your IP_ADDRESS AND USERAGENT
-#  curl -s http://www.sente.cc/stu/cgi-bin/env.py?ip:agent 
+#curl -s http://www.sente.cc/stu/cgi-bin/env.py?ip
 
 function grab_url  {
 	URL=$1

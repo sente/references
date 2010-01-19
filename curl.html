@@ -1,0 +1,70 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <title>cookies (web.py)</title>
+  <link rel="stylesheet" type="text/css" href="webpy-new.css"/>
+  <link rel="SHORTCUT ICON" href="http://webpy.org/static/favicon.ico"/>
+  
+
+
+
+</head><body>
+
+
+<div id="container">
+
+<div id="main">
+
+
+
+<h1>curl</h1>
+
+
+<div id="content">
+
+
+
+
+<h4>grab_url</h4>
+<p><code>grab_url</code> can be used to set the cookie for a user, like this: </p>
+<pre>
+<code>function grab_url  {
+	URL=$1
+	OUT=$2
+	echo $URL
+	echo $OUT
+	if [ -z "$OUT" ]; then 
+		echo "curl -s $URL"
+		curl -s $URL 
+	else
+		echo "curl -s $URL -o $OUT"
+		curl -s $URL -o $OUT
+	fi
+}</code></pre>
+<p>Calling the above class with GET will set a cookie named &quot;age&quot; with a default value equal to &quot;25&quot; (this default value actually comes from the web.input processing, NOT the setcookie function), which expires in 1 hour (3600 seconds).
+</p>
+
+</div>
+
+
+<h4>upload_two_files</h4>
+<p><code>upload_two_files</code> can be used to set the cookie for a user, like this: </p>
+<pre>
+<code>function upload_two_files() {
+	TARGET=http://sente.cc/stu/cgi-bin/compare-bin.py
+	FILE=/etc/passwd
+	FILE2=/etc/group
+	curl -F "file.1=@${FILE}" "file.2=@${FILE}" $TARGET
+}</code></pre>
+<p>Calling the above class with GET will set a cookie named &quot;age&quot; with a default value equal to &quot;25&quot; (this default value actually comes from the web.input processing, NOT the setcookie function), which expires in 1 hour (3600 seconds).
+</p>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
