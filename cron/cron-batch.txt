@@ -1,0 +1,19 @@
+
+# install cronjobs in a batch mode
+
+function install_cron_job { 
+
+	#backup the old cronjob
+	crontab -l > ~/.crontab.old
+
+
+	crontab -l > crontab.cron
+
+	echo "#cronjob install via batch mode"  >> crontab.cron
+	echo "#cronjob will run every 4 hours"  >> crontab.cron
+	echo "0 */4 * * * ~/bin/every4hours.sh" >> crontab.cron
+	
+	crontab crontab.cron
+
+	rm crontab.cron
+}
