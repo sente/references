@@ -1,0 +1,71 @@
+# remove the first line from a file:
+
+cat file | sed 1d
+
+
+#capture/test parameters:
+#!/bin/sh
+
+one=$1
+two=$2
+three=$3
+[[ -n $one && -n $two && -n $three ]] || {
+   echo "params not supplied!"
+   exit 1
+}
+
+
+
+n1 -- number lines of files:
+
+http://bash-hackers.org/wiki/doku.php/snipplets/prargs
+
+perl -n -e 'BEGIN { $x=0 }' -e 'chomp; $orig=$_; @fields = split /\|/; $x++; print scalar(@fields)."\t".$x."\t".$orig."\n"'  .bash_history  | sort -n
+
+L=1; ls -1 |head | while read line; do echo -e "$L:\t$line"; L=$((L+1)); done | sed 2,4d
+
+
+BASH ARRAYS
+http://mywiki.wooledge.org/BashFAQ/005
+# Read the contents of $THEFILE into $THEARRAY
+tmp=$IFS IFS=$'\n' THEARRAY=($(< $THEFILE)) IFS=$tmp
+
+
+
+IMG_IN=tmp/Q.jpg
+IMG_OUT=tmp/W.jpg
+sqlite3 img.db "create table imgs (id INTEGER PRIMARY KEY, img BLOB); insert into imgs (img) values (\"$(base64 -w0 ${IMG_IN})\"); select img from imgs where id=1;" | base64 -d -w0 > ${IMG_OUT}
+
+stu@sente ~/code/base64 $ cat table.txt
+0 A 16 Q
+1 B 17 R
+2 C 18 S
+
+while IFS=$':' read -r -d' ' line; do echo "$line"; done < table.txt | xargs -n2 -d"\n" echo | sort -n
+
+0 A
+1 B
+2 C
+3 D
+4 E
+5 F
+6 G
+7 H
+8 I
+9 J
+10 K
+11 L
+12 M
+13 N
+14 O
+15 P
+16 Q
+17 R
+18 S
+19 T
+20 U
+21 V
+22 W
+
+
+

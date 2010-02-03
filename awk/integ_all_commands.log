@@ -1,0 +1,149 @@
+timestamp	flag	time	path	script
+integ_20091222.0310.676022190.log	START	0	/di/sales/programs	product.int
+integ_20091222.0310.676022190.log	END	0	/di/sales/programs	product.int
+integ_20091222.0310.783055091.log	START	0	/di/sales/programs	distributor.int
+integ_20091222.0310.783055091.log	END	0	/di/sales/programs	distributor.int
+integ_20091222.0310.837360274.log	START	0	/di/sales/programs	split_ship.int
+integ_20091222.0310.837360274.log	END	0	/di/sales/programs	split_ship.int
+integ_20091222.0310.916006858.log	START	0	/di/sales/programs	ship.int
+integ_20091222.0310.916006858.log	END	4	/di/sales/programs	ship.int
+integ_20091222.0310.821188498.log	START	0	/di/bdn/programs	digest.int
+integ_20091222.0310.408978607.log	START	0	/di/bdn/incoming	../programs/split_salesman.int
+integ_20091222.0310.408978607.log	END	0	/di/bdn/incoming	../programs/split_salesman.int
+integ_20091222.0310.444867923.log	START	0	/di/bdn/incoming	../programs/split_retailer.int -D FILE=cust4.dat -D TYPE=BDN
+integ_20091222.0310.444867923.log	END	1	/di/bdn/incoming	../programs/split_retailer.int -D FILE=cust4.dat -D TYPE=BDN
+integ_20091222.0310.260045696.log	START	0	/di/bdn/incoming	../programs/split_retailer.int -D FILE=cust4.dat -D TYPE=TDLINX
+integ_20091222.0310.260045696.log	END	0	/di/bdn/incoming	../programs/split_retailer.int -D FILE=cust4.dat -D TYPE=TDLINX
+integ_20091222.0310.757494571.log	START	0	/di/bdn/incoming	../programs/sync_split.int
+integ_20091222.0310.757494571.log	END	43	/di/bdn/incoming	../programs/sync_split.int
+integ_20091222.0311.665269790.log	START	0	/di/bdn/incoming	../programs/sync_squash.int
+integ_20091222.0311.665269790.log	END	1	/di/bdn/incoming	../programs/sync_squash.int
+integ_20091222.0311.606423318.log	START	0	/di/bdn/incoming	../programs/split_sales.int -D v2=1
+integ_20091222.0311.606423318.log	END	0	/di/bdn/incoming	../programs/split_sales.int -D v2=1
+integ_20091222.0311.815489752.log	START	0	/di/bdn/incoming	../programs/split_depl.int
+integ_20091222.0311.815489752.log	END	0	/di/bdn/incoming	../programs/split_depl.int
+integ_20091222.0311.957205432.log	START	0	/di/bdn/incoming	../programs/update_mast.int
+integ_20091222.0311.957205432.log	END	47	/di/bdn/incoming	../programs/update_mast.int
+integ_20091222.0310.821188498.log	END	93	/di/bdn/programs	digest.int
+integ_20091222.0311.473000077.log	START	0	/di/sales/programs/dimins	filelist.int
+integ_20091222.0311.473000077.log	END	1	/di/sales/programs/dimins	filelist.int
+integ_20091222.0311.460590577.log	START	0	/di/sales/programs	chain.int
+integ_20091222.0311.460590577.log	END	1	/di/sales/programs	chain.int
+integ_20091222.0312.306249173.log	START	0	/di/sales/programs	customer.int
+integ_20091222.0312.306249173.log	END	92	/di/sales/programs	customer.int
+integ_20091222.0315.639159565.log	START	0	/di/sales/programs	sales_parms.int
+integ_20091222.0315.652644669.log	START	0	/di/sales/programs	sales.int -D cur=true -D timeper=2009-11
+integ_20091222.0315.652644669.log	END	412	/di/sales/programs	sales.int -D cur=true -D timeper=2009-11
+integ_20091222.0324.934034530.log	START	0	/di/sales/programs	sales.int -D year0=true -D timeper=2009
+integ_20091222.0324.934034530.log	END	601	/di/sales/programs	sales.int -D year0=true -D timeper=2009
+integ_20091222.0402.786777133.log	START	0	/di/sales/programs	sales.int -D year1=true -D timeper=2008
+integ_20091222.0402.786777133.log	END	582	/di/sales/programs	sales.int -D year1=true -D timeper=2008
+integ_20091222.0439.181283043.log	START	0	/di/sales/programs	sales.int -D year2=true -D timeper=2007
+integ_20091222.0439.181283043.log	END	482	/di/sales/programs	sales.int -D year2=true -D timeper=2007
+integ_20091222.0459.768195598.log	START	0	/di/sales/programs	sales.int -D year3=true -D timeper=2006
+integ_20091222.0459.768195598.log	END	439	/di/sales/programs	sales.int -D year3=true -D timeper=2006
+integ_20091222.0510.355333265.log	START	0	/di/sales/programs	sales.int -D year4=true -D timeper=2005
+integ_20091222.0510.355333265.log	END	406	/di/sales/programs	sales.int -D year4=true -D timeper=2005
+integ_20091222.0315.639159565.log	END	7497	/di/sales/programs	sales_parms.int
+integ_20091222.0520.599427031.log	START	0	/di/sales/programs	depl_parms.int
+integ_20091222.0520.615757979.log	START	0	/di/sales/programs	depl.int -D cur=true -D timeper=2009-11
+integ_20091222.0520.615757979.log	END	2	/di/sales/programs	depl.int -D cur=true -D timeper=2009-11
+integ_20091222.0520.244967002.log	START	0	/di/sales/programs	depl.int -D year0=true -D timeper=2009
+integ_20091222.0520.244967002.log	END	4	/di/sales/programs	depl.int -D year0=true -D timeper=2009
+integ_20091222.0520.708887705.log	START	0	/di/sales/programs	depl.int -D year1=true -D timeper=2008
+integ_20091222.0520.708887705.log	END	3	/di/sales/programs	depl.int -D year1=true -D timeper=2008
+integ_20091222.0520.917957255.log	START	0	/di/sales/programs	depl.int -D year2=true -D timeper=2007
+integ_20091222.0520.917957255.log	END	3	/di/sales/programs	depl.int -D year2=true -D timeper=2007
+integ_20091222.0520.634361379.log	START	0	/di/sales/programs	depl.int -D year3=true -D timeper=2006
+integ_20091222.0520.634361379.log	END	2	/di/sales/programs	depl.int -D year3=true -D timeper=2006
+integ_20091222.0521.981711521.log	START	0	/di/sales/programs	depl.int -D year4=true -D timeper=2005
+integ_20091222.0521.981711521.log	END	2	/di/sales/programs	depl.int -D year4=true -D timeper=2005
+integ_20091222.0520.599427031.log	END	21	/di/sales/programs	depl_parms.int
+integ_20091222.0521.404226966.log	START	0	/di/sales/programs	td_geo.int
+integ_20091222.0521.404226966.log	END	66	/di/sales/programs	td_geo.int
+integ_20091222.0522.019904111.log	START	0	/di/sales/programs	td_acct.int
+integ_20091222.0522.019904111.log	END	243	/di/sales/programs	td_acct.int
+integ_20091222.0527.391271410.log	START	0	/di/admin/programs	di_main.int
+integ_20091222.0527.431032046.log	START	0	/di/admin/programs	../programs/200_get_dicfg_info.int -D DI_Admin=.. -D DATAROOT=/di_solution/dl-dataroot -D dicfg=/di_solution/executables/dicfg
+integ_20091222.0527.321168736.log	START	0	/di/admin/programs	../programs/210_user_info.int -D DI_Admin=..
+integ_20091222.0527.321168736.log	END	0	/di/admin/programs	../programs/210_user_info.int -D DI_Admin=..
+integ_20091222.0527.431032046.log	END	1	/di/admin/programs	../programs/200_get_dicfg_info.int -D DI_Admin=.. -D DATAROOT=/di_solution/dl-dataroot -D dicfg=/di_solution/executables/dicfg
+integ_20091222.0527.357900663.log	START	0	/di/admin/programs	../programs/210_user_info.int -D DI_Admin=.. -D DATAROOT=/di_solution/dl-dataroot
+integ_20091222.0527.357900663.log	END	0	/di/admin/programs	../programs/210_user_info.int -D DI_Admin=.. -D DATAROOT=/di_solution/dl-dataroot
+integ_20091222.0527.373101401.log	START	0	/di/admin/programs	../programs/215_user_count_sum.int -D DI_Admin=.. -D Srvrname=DI
+integ_20091222.0527.373101401.log	END	0	/di/admin/programs	../programs/215_user_count_sum.int -D DI_Admin=.. -D Srvrname=DI
+integ_20091222.0527.398561077.log	START	0	/di/admin/programs	../programs/310_get_current_yearmonth.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.398561077.log	END	0	/di/admin/programs	../programs/310_get_current_yearmonth.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.409779006.log	START	0	/di/admin/programs	../programs/320_events_get_userlist.int -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=0
+integ_20091222.0527.409779006.log	END	2	/di/admin/programs	../programs/320_events_get_userlist.int -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=0
+integ_20091222.0527.869082460.log	START	0	/di/admin/programs	../programs/330_users_get_user_type.int -D Period=0 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.869082460.log	END	0	/di/admin/programs	../programs/330_users_get_user_type.int -D Period=0 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.894052619.log	START	0	/di/admin/programs	../programs/405_acl-file_delete.int -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.894052619.log	END	0	/di/admin/programs	../programs/405_acl-file_delete.int -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.914024572.log	START	0	/di/admin/programs	../programs/410_acl-file_get_all.int -D ACL-Dir=/di_solution/dl-dataroot/acl -D Output-File=../temp/420_acl-list.txt -D DI_Admin=..
+integ_20091222.0527.924862736.log	START	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/DI_Users/SHARED.dir
+integ_20091222.0527.924862736.log	END	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/DI_Users/SHARED.dir
+integ_20091222.0527.945765088.log	START	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/DI_Users/SHARED.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.945765088.log	END	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/DI_Users/SHARED.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.967391471.log	START	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/DI_Users.dir
+integ_20091222.0527.967391471.log	END	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/DI_Users.dir
+integ_20091222.0527.978149649.log	START	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/DI_Users.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.978149649.log	END	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/DI_Users.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.991065919.log	START	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/di_suppliers.dir
+integ_20091222.0527.991065919.log	END	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/di_suppliers.dir
+integ_20091222.0527.001692102.log	START	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/di_suppliers.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.001692102.log	END	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/di_suppliers.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.012948828.log	START	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/sales.dir
+integ_20091222.0527.012948828.log	END	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/sales.dir
+integ_20091222.0527.024109478.log	START	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/sales.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.024109478.log	END	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/sales.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.056604913.log	START	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/dev.dir
+integ_20091222.0527.056604913.log	END	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/dev.dir
+integ_20091222.0527.082486608.log	START	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/dev.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.082486608.log	END	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di/solution/dl-dataroot/acl/dev.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.095428652.log	START	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di_solution/dl-dataroot/acl.dir
+integ_20091222.0527.095428652.log	END	0	/di/admin/programs	../programs/420a_acl-file_read.int -D ACL-File=/di_solution/dl-dataroot/acl.dir
+integ_20091222.0527.113252607.log	START	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di_solution/dl-dataroot/acl.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.113252607.log	END	0	/di/admin/programs	../programs/420b_acl-file_read.int -D ACL-File=/di_solution/dl-dataroot/acl.dir -D Output-File=../temp/420_acl-list.txt
+integ_20091222.0527.914024572.log	END	1	/di/admin/programs	../programs/410_acl-file_get_all.int -D ACL-Dir=/di_solution/dl-dataroot/acl -D Output-File=../temp/420_acl-list.txt -D DI_Admin=..
+integ_20091222.0527.135073200.log	START	0	/di/admin/programs	../programs/421_acl-file_clean.int -D DI_Admin=..
+integ_20091222.0527.135073200.log	END	0	/di/admin/programs	../programs/421_acl-file_clean.int -D DI_Admin=..
+integ_20091222.0527.186592376.log	START	0	/di/admin/programs	../programs/505_usage_get_all_alias.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.186592376.log	END	0	/di/admin/programs	../programs/505_usage_get_all_alias.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.201375307.log	START	0	/di/admin/programs	../programs/560_usage_run_get_all.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.209994864.log	START	0	/di/admin/programs	../programs/561_usage_get_all.int -D filedir=/di_solution/dl-dataroot/data -D DI_Admin=..
+integ_20091222.0527.209994864.log	END	0	/di/admin/programs	../programs/561_usage_get_all.int -D filedir=/di_solution/dl-dataroot/data -D DI_Admin=..
+integ_20091222.0527.201375307.log	END	0	/di/admin/programs	../programs/560_usage_run_get_all.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.762550966.log	START	0	/di/admin/programs	../programs/520_events_get_list.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=0
+integ_20091222.0527.762550966.log	END	0	/di/admin/programs	../programs/520_events_get_list.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=0
+integ_20091222.0527.963386923.log	START	0	/di/admin/programs	../programs/550_usage_get_active_times_last.int -D Period=0 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.963386923.log	END	6	/di/admin/programs	../programs/550_usage_get_active_times_last.int -D Period=0 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0527.295030000.log	START	0	/di/admin/programs	../programs/530_events_user_usage.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=0 -D port=
+integ_20091222.0527.295030000.log	END	0	/di/admin/programs	../programs/530_events_user_usage.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=0 -D port=
+integ_20091222.0527.852407499.log	START	0	/di/admin/programs	../programs/590_usage_full_list.int -D Period=0 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D port=
+integ_20091222.0527.852407499.log	END	305	/di/admin/programs	../programs/590_usage_full_list.int -D Period=0 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D port=
+integ_20091222.0532.539053966.log	START	0	/di/admin/programs	../programs/320_events_get_userlist.int -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=1
+integ_20091222.0532.539053966.log	END	1	/di/admin/programs	../programs/320_events_get_userlist.int -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=1
+integ_20091222.0532.734102501.log	START	0	/di/admin/programs	../programs/330_users_get_user_type.int -D Period=1 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0532.734102501.log	END	0	/di/admin/programs	../programs/330_users_get_user_type.int -D Period=1 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0532.750136506.log	START	0	/di/admin/programs	../programs/520_events_get_list.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=1
+integ_20091222.0532.750136506.log	END	0	/di/admin/programs	../programs/520_events_get_list.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=1
+integ_20091222.0532.879632011.log	START	0	/di/admin/programs	../programs/550_usage_get_active_times_last.int -D Period=1 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0532.879632011.log	END	2	/di/admin/programs	../programs/550_usage_get_active_times_last.int -D Period=1 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0532.855991767.log	START	0	/di/admin/programs	../programs/530_events_user_usage.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=1 -D port=
+integ_20091222.0532.855991767.log	END	1	/di/admin/programs	../programs/530_events_user_usage.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=1 -D port=
+integ_20091222.0532.187759912.log	START	0	/di/admin/programs	../programs/590_usage_full_list.int -D Period=1 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D port=
+integ_20091222.0532.187759912.log	END	2	/di/admin/programs	../programs/590_usage_full_list.int -D Period=1 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D port=
+integ_20091222.0532.267648827.log	START	0	/di/admin/programs	../programs/320_events_get_userlist.int -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=2
+integ_20091222.0532.267648827.log	FAILED	0	/di/admin/programs	../programs/320_events_get_userlist.int -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=2
+integ_20091222.0532.284212603.log	START	0	/di/admin/programs	../programs/330_users_get_user_type.int -D Period=2 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0532.284212603.log	FAILED	0	/di/admin/programs	../programs/330_users_get_user_type.int -D Period=2 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0532.294266569.log	START	0	/di/admin/programs	../programs/520_events_get_list.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=2
+integ_20091222.0532.294266569.log	FAILED	0	/di/admin/programs	../programs/520_events_get_list.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=2
+integ_20091222.0532.310504637.log	START	0	/di/admin/programs	../programs/550_usage_get_active_times_last.int -D Period=2 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0532.310504637.log	FAILED	0	/di/admin/programs	../programs/550_usage_get_active_times_last.int -D Period=2 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs
+integ_20091222.0532.326459250.log	START	0	/di/admin/programs	../programs/530_events_user_usage.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=2 -D port=
+integ_20091222.0532.326459250.log	FAILED	0	/di/admin/programs	../programs/530_events_user_usage.int -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D Period=2 -D port=
+integ_20091222.0532.342667817.log	START	0	/di/admin/programs	../programs/590_usage_full_list.int -D Period=2 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D port=
+integ_20091222.0532.342667817.log	FAILED	0	/di/admin/programs	../programs/590_usage_full_list.int -D Period=2 -D DATAROOT=/di_solution/dl-dataroot -D DI_Admin=.. -D Logs_Directory=/di_solution/dl-dataroot/logs -D port=
+integ_20091222.0527.391271410.log	END	321	/di/admin/programs	di_main.int

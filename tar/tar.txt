@@ -1,0 +1,84 @@
+#!/bin/sh
+
+
+
+#copy files preserving permissions/timestamps
+
+function grab_url  {
+	URL=$1
+	OUT=$2
+
+	if [ -z "$OUT" ];
+
+		then 
+			echo "curl -s $URL"
+			curl -s $URL 
+
+		else
+			echo "curl -s $URL -o $OUT"
+			curl -s $URL -o $OUT
+			tar -
+	fi
+}
+
+
+DESTPATH=tmp.tmp
+
+
+(tar -cf - . ) | ( ssh server "tar -cf DEST .")
+
+
+ssh server 'cat - > bin/script.sh && chmod a+x bin/script.sh && ./home/bin/script.sh' < thescript.sh
+
+
+
+/di/solution/dl-dataroot/logs/usage/201001/usage-20100107.log
+cat /di/solution/dl-dataroot/logs/usage/201001/usage-20100106.log | awk 'BEGIN { FS = "\t" }; !x[$12]++'
+#split files with tar
+tar -xM 30000 alltar.tar -f a.tar -f b.tar -f c.tar -f d.tar 
+nice split --line-bytes=30m alltar.tar 
+for i in ./*; do [[ -f $i ]] && list+=("$i"); done; tar -cf foo.tar "${list[@]}"
+rcconf -- control which services are started when the systme boots
+rsync -avPr --include="*.dvp" --include="*.mrk" --include="*.rep" --include="*.tpl" --exclude="*.md*" --relative ./ pd:/di_atlantis/dl-dataroot/data/
+#pssh -e stderr -l spowers -h /home/stu/work/final_servers.txt -i -p4 cat /di/solution/dl-dataroot/temp/users.txt
+
+
+
+				#piping into curl and uploading as if it was "myfile.file"
+				function pipe_file_upload() {
+					TARGET=http://sente.cc/stu/cgi-bin/compare-bin.py
+					curl -F "myfile.file=<-" $TARGET
+				}
+
+				##############################################################################
+
+				#piping into curl and uploading it as if it was from a textarea
+				function emailpipe () {
+					curl -F "note=<-" http://sente.cc/cgi-bin/email.pl
+				}
+
+
+
+
+
+				##############################################################################
+
+				#upload a file (CGI POST)
+				function upload_a_file() {
+					TARGET=http://sente.cc/stu/cgi-bin/compare-bin.py
+					FILE=/etc/passwd
+					curl -F "file.1=@${FILE}" $TARGET
+				}
+
+
+				##############################################################################
+				#upload two files
+				function upload_two_files() {
+					TARGET=http://sente.cc/stu/cgi-bin/compare-bin.py
+					FILE=/etc/passwd
+					FILE2=/etc/group
+					curl -F "file.1=@${FILE}" "file.2=@${FILE}" $TARGET
+				}
+
+				##############################################################################
+

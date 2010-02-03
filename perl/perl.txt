@@ -1,0 +1,32 @@
+seq 1 10 | perl -p -e '$_ = "prefix: $_"'
+
+stu@sente ~ $ seq 1 10 | perl -p -e '$_ = "prefix: $_"'
+prefix: 1
+prefix: 2
+prefix: 3
+prefix: 4
+prefix: 5
+prefix: 6
+prefix: 7
+prefix: 8
+prefix: 9
+prefix: 10
+
+stu@sente ~ $ perl -F: -l -a -n -e 'print $F[2].":".$F[0].":".$F[3]' /etc/passwd | sort -n
+0:root:0
+1:daemon:1
+2:bin:2
+3:sys:3
+4:sync:65534
+...
+1000:stu:100
+1001:bobz:100
+1002:vinay:100
+1003:ben:100
+1004:rob:100
+1005:gote:1006
+65534:nobody:65534
+
+
+perl -n -e 'BEGIN { $x=0 }' -e 'chomp; $orig=$_; @fields = split /\|/; $x++; print scalar(@fields)."\t".$x."\t".$orig."\n"'  .bash_history  | sort -n
+
