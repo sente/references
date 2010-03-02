@@ -2,6 +2,11 @@
 
 
 
+#remotely extract a tar file:
+cat some.tar | ssh server "tar xvf -"
+ssh server "cat some.tar" | tar xvf -
+
+
 #copy files preserving permissions/timestamps
 
 function grab_url  {
