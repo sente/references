@@ -1,3 +1,7 @@
+# create an array of arrays from the tab delimited file.
+foo = [line.rstrip('\r').split('\t')  for line in open("some_file","r")]
+
+
 # remove the first line from a file:
 
 cat file | sed 1d
