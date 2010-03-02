@@ -1,0 +1,45 @@
+This parser knows the following facts about HTML:
+
+    * Some tags have no closing tag and should be interpreted as being
+      closed as soon as they are encountered.
+
+    * The text inside some tags (ie. 'script') may contain tags which
+      are not really part of the document and which should be parsed
+      as text, not tags. If you want to parse the text as tags, you can
+      always fetch it and parse it explicitly.
+
+    * Tag nesting rules:
+
+      Most tags can't be nested at all. For instance, the occurance of
+      a <p> tag should implicitly close the previous <p> tag.
+
+       <p>Para1<p>Para2
+        should be transformed into:
+       <p>Para1</p><p>Para2
+
+      Some tags can be nested arbitrarily. For instance, the occurance
+      of a <blockquote> tag should _not_ implicitly close the previous
+      <blockquote> tag.
+
+       Alice said: <blockquote>Bob said: <blockquote>Blah
+        should NOT be transformed into:
+       Alice said: <blockquote>Bob said: </blockquote><blockquote>Blah
+
+      Some tags can be nested, but the nesting is reset by the
+      interposition of other tags. For instance, a <tr> tag should
+      implicitly close the previous <tr> tag within the same <table>,
+      but not close a <tr> tag in another table.
+
+       <table><tr>Blah<tr>Blah
+        should be transformed into:
+       <table><tr>Blah</tr><tr>Blah
+        but,
+       <tr>Blah<table><tr>Blah
+        should NOT be transformed into
+       <tr>Blah<table></tr><tr>Blah
+
+    Differing assumptions about tag nesting rules are a major source
+    of problems with the BeautifulSoup class. If BeautifulSoup is not
+    treating as nestable a tag your page author treats as nestable,
+    try ICantBelieveItsBeautifulSoup, MinimalSoup, or
+    BeautifulStoneSoup before writing your own subclass.
