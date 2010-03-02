@@ -5,12 +5,15 @@ foo = [line.rstrip('\r').split('\t')  for line in open("some_file","r")]
 
 
 #find all the unique versions of a file from an rsnapshot directory
-ls -1 /ir-backups/*/remy/di/Sales/programs/bdn_sales.int | cut -f2 -d' ' | while read line;  do stat --printf="%Y\t%i\t\t%t\t%n\n" $line; done | sort | awk '!x[$1]++'
-1239916120      19448013                0       /ir-backups/weekly.34/remy/di/Sales/programs/bdn_sales.int
-1240930154      19447930                0       /ir-backups/weekly.32/remy/di/Sales/programs/bdn_sales.int
-1242068573      19497680                0       /ir-backups/weekly.27/remy/di/Sales/programs/bdn_sales.int
-1245180626      19497585                0       /ir-backups/weekly.24/remy/di/Sales/programs/bdn_sales.int
-1247170151      19497554                0       /ir-backups/weekly.23/remy/di/Sales/programs/bdn_sales.int
+ls -1 /ir-backups/*/remy/di/Sales/programs/bdn_sales.int |
+cut -f2 -d' ' |
+	while read line; do
+		stat --printf="%Y\t%h\t%n\t" $line;
+		md5sum <$line;
+	done | sort |
+awk -F$'\t' '!x[$4]++'
+
+
 
 
 # remove the first line from a file:
