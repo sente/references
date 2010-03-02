@@ -2,6 +2,14 @@
 foo = [line.rstrip('\r').split('\t')  for line in open("some_file","r")]
 
 
+
+
+stu@sente ~/public_html/shell $ ls -1 /ir-backups/*/hart-dat/di/global/progfiscal/ar.int | cut -f2 -d' ' | while read line;  do stat --printf="%i\t%Y\t%t\t%n\n" $line; done | awk '!a[$1]++'
+18139961        1242745569      0       /ir-backups/daily.0/hart-dat/di/global/progfiscal/ar.int
+23028405        1242074679      0       /ir-backups/weekly.26/hart-dat/di/global/progfiscal/ar.int
+18924359        1236969798      0       /ir-backups/weekly.32/hart-dat/di/global/progfiscal/ar.int
+
+
 # remove the first line from a file:
 
 cat file | sed 1d
